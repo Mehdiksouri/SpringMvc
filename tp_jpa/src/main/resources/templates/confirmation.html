@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="template1">
+<head>
+<meta charset="utf-8">
+<title>Form Patients</title>
+
+</head>
+<body>
+	<div layout:fragment="pageContent">
+		<div class="container">
+			<div class="card">
+				<div class="card-header">Enregistrement effectué</div>
+					<div class="card-body">
+						<div class="form-group">
+					<strong>	<label>ID:</label></strong>
+						<label  th:text="${patient.id}"></label>
+						</div>	
+						<div class="form-group">
+						<strong><label>Name:</label></strong>
+						<label th:text="${patient.nom}"></label>
+						</div>	
+						<div class="form-group">
+						<strong><label>Date Naissance:</label></strong>
+						<label th:text="${patient.dateNaissance}"></label>
+						</div>	
+						<div class="form-group">
+						<strong><label>score:</label></strong>
+						<label th:text="${patient.score}"></label>
+						</div>	
+						<div class="form-group">
+						<strong><label>!Malade:</label></strong>
+						<label th:text="${patient.malade}"></label>
+						</div>
+								
+									
+					</div>
+			</div>
+		</div>
+
+	</div>
+	<button class='btn btn-lg ' style='background-color:transparent;'> 
+  <div style='text-align:center;'><i class="fa fa-times"></i></div>  
+    Cancel Reservation
+</button>
+
+
+
+</body>
+</html>
